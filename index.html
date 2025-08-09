@@ -3,167 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Resume</title>
+  <title>Muhammad — Front-End Developer Resume</title>
   <style>
-    * {
-      margin: 0;
+    /* Base */
+    :root {
+      --text: #222;
+      --muted: #555;
+      --accent: #0b6fc2;
+      --border: #cfcfcf;
+    }
+    * { box-sizing: border-box; }
+    html, body {
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f9f9f9;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
+      margin: 0;
       background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+      font-size: 13px;
     }
 
+    /* Layout */
+    .resume {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    .divider {
+      border-top: 1px solid var(--border);
+      margin: 14px 0;
+    }
+
+    /* Header */
     header {
-      text-align: center;
-      margin-bottom: 20px;
+      display: block;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0 0 4px 0;
+    }
+    .contact {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .contact a:hover { text-decoration: underline; }
+    .contact-line { margin: 2px 0; }
+
+    /* Sections */
+    .section-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 15px;
+      margin: 12px 0 6px 0;
+      letter-spacing: 0.3px;
     }
 
-    header h1 {
-      font-size: 32px;
-      color: #222;
-    }
-
-    .title {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .contact p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    section {
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      font-size: 20px;
-      color: #0056b3;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
-
+    /* Lists */
     ul {
-      list-style: disc;
-      margin-left: 20px;
+      margin: 6px 0;
+      padding-left: 18px;
+    }
+    li {
+      margin: 4px 0;
     }
 
-    .job, .project {
-      margin-bottom: 15px;
+    /* Entries */
+    .item { margin: 8px 0; }
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .item-sub {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 6px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .left, .right { display: inline-block; }
+    .right { text-align: right; }
+
+    /* Skills */
+    .skills-list { margin-top: 4px; }
+    .skill-group { margin: 6px 0; }
+    .skill-label {
+      font-weight: 700;
+      display: inline;
+    }
+    .skill-content {
+      display: inline;
     }
 
-    .date {
-      font-size: 14px;
-      color: #777;
-      margin-bottom: 5px;
+    /* Links inline */
+    .inline-link {
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
     }
+    .inline-link:hover { text-decoration: underline; }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 10px;
+    /* Print */
+    @media print {
+      .resume {
+        padding: 18px;
       }
-
-      .container {
-        padding: 20px;
-      }
-
-      header h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 18px;
+      a.inline-link {
+        color: inherit;
+        text-decoration: underline;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="resume" role="main">
+     Header 
     <header>
-      <h1>Your Full Name</h1>
-      <p class="title">AI Engineer | Automation Expert | Data Scientist</p>
+      <h1 class="name">MUHAMMAD</h1>
       <div class="contact">
-        <p>Email: yourname@email.com</p>
-        <p>Phone: +92 300 1234567</p>
-        <p>LinkedIn: linkedin.com/in/yourname</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>Location: Islamabad, Pakistan</p>
+        <div class="contact-line">Email: <a href="mailto:m.educatify@gmail.com">m.educatify@gmail.com</a></div>
+        <div class="contact-line">Mobile: 03315974933</div>
+        <div class="contact-line">LinkedIn: <a href="https://linkedin.com/in/muhammad5330">https://linkedin.com/in/muhammad5330</a></div>
+        <div class="contact-line">GitHub: <a href="https://github.com/muhammad5330">https://github.com/muhammad5330</a></div>
       </div>
     </header>
 
-    <section class="summary">
-      <h2>Professional Summary</h2>
+    <div class="divider"></div>
+
+     Professional Summary 
+    <section aria-labelledby="summary">
+      <h2 id="summary" class="section-title">Professional Summary</h2>
       <p>
-        Enthusiastic AI Automation Engineer with hands-on experience in Python, machine learning, web automation, and system integration. Proven ability to deliver real-world AI products, automate business processes, and optimize operations. Actively seeking to contribute to innovative projects in a fast-paced environment.
+        Senior Front‑End Developer specializing in building accessible, responsive, and high‑performance web interfaces with HTML5, CSS3, JavaScript, and React.js. Experienced in systematizing UI with reusable components, elevating UX through thoughtful interaction design, and integrating data visualization for actionable insight. Comfortable collaborating with product/design, owning UI delivery end‑to‑end, and optimizing Core Web Vitals, accessibility, and SEO‑friendly markup to support growth and retention.
       </p>
     </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
+    <div class="divider"></div>
+
+     Skills 
+    <section aria-labelledby="skills">
+      <h2 id="skills" class="section-title">Skills Summary</h2>
+      <div class="skills-list">
+        <div class="skill-group">
+          <span class="skill-label">Languages & Frameworks: </span>
+          <span class="skill-content">HTML5, CSS3, JavaScript (ES6+), React.js, Python, Flask, SQL</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Tools & Platforms: </span>
+          <span class="skill-content">GitHub, Figma, Canva, WordPress, VPS Deployment, DNS Management</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-label">Soft Skills: </span>
+          <span class="skill-content">Business Communication, Team Management, Problem‑Solving, Analytical Reasoning, Time Management</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+     Work Experience 
+    <section aria-labelledby="experience">
+      <h2 id="experience" class="section-title">Work Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Senior Front‑End Developer | Educatify</div>
+          <div class="right">July 2024 – Present</div>
+        </div>
+        <ul>
+          <li>Led the end‑to‑end front‑end architecture for a learning platform, building responsive layouts, reusable React components, and accessible UI patterns across desktop and mobile.</li>
+          <li>Implemented design‑system foundations (tokens, spacing, color, typography) and component guidelines to ensure consistency and accelerate feature development.</li>
+          <li>Translated Figma concepts into production‑ready interfaces with semantic HTML and modern CSS, improving readability and maintainability.</li>
+          <li>Integrated YouTube content, quizzes, and admin workflows; implemented stateful UI, form validation, and error handling to streamline learner journeys.</li>
+          <li>Delivered performant pages by optimizing images, minimizing reflows, lazy‑loading non‑critical resources, and refining CSS/JS bundles for faster first paint.</li>
+          <li>Built data visualization views (charts/graphs) to surface results and progress insights, focusing on clarity, accessibility, and interaction affordances.</li>
+          <li>Improved accessibility through ARIA labeling, color‑contrast checks, keyboard navigation, and structured headings to align with WCAG best practices.</li>
+          <li>Enhanced SEO and shareability with semantic markup, descriptive metadata, and clean URL structures.</li>
+          <li>Collaborated with back‑end engineers to define API contracts; integrated REST endpoints and handled loading/error states with resilient UI patterns.</li>
+          <li>Partnered with stakeholders on UX iterations driven by user feedback and analytics; contributed to significant traffic growth through better UX and performance.</li>
+          <li>Maintained high code quality with Git workflows and reviews; documented components and UI standards to onboard contributors quickly.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+     Projects 
+    <section aria-labelledby="projects">
+      <h2 id="projects" class="section-title">Projects</h2>
       <ul>
-        <li>Python, Pandas, NumPy, OpenCV</li>
-        <li>Machine Learning, Scikit-learn, TensorFlow</li>
-        <li>Flask, REST APIs</li>
-        <li>Web Automation (Selenium, Requests)</li>
-        <li>SQL, MySQL, MongoDB</li>
-        <li>Git, Linux, Bash</li>
+        <li><strong>Educatify (Platform)</strong> — LMS with YouTube integration, quizzes, data visualization, and admin panel. <a class="inline-link" href="https://educatify.pk/">[Live Demo]</a></li>
+        <li><strong>JK Properties Website</strong> — Static website with multi‑page structure and interactive forms. <a class="inline-link" href="https://jkpropertiesabandon.netlify.app/">[Live Demo]</a></li>
+        <li><strong>Donuts with Nuts Website</strong> — Clean, responsive bakery website with aesthetic branding. <a class="inline-link" href="https://donutswithnuts.netlify.app/">[Live Demo]</a></li>
+        <li><strong>Gaming Arena Store Landing Page</strong> — Stylish landing page for a fictional gaming merchandise store. <a class="inline-link" href="https://gamingarenastore.netlify.app/">[Live Demo]</a></li>
+        <li><strong>AJ Photography Portfolio Site</strong> — Portfolio with gallery sections and minimalist layout. <a class="inline-link" href="https://ajphotografy.netlify.app/">[Live Demo]</a></li>
       </ul>
     </section>
 
-    <section class="experience">
-      <h2>Work Experience</h2>
-      <div class="job">
-        <h3>AI Intern – XYZ Company</h3>
-        <p class="date">Jan 2024 – Present</p>
-        <ul>
-          <li>Built a document chatbot using OpenAI & Langchain, improving document accessibility.</li>
-          <li>Automated repetitive tasks using Python & Selenium, reducing manual effort by 70%.</li>
-          <li>Collaborated on API integrations and deployed solutions using Flask and MySQL.</li>
-        </ul>
-      </div>
-      <!-- Add more jobs here -->
-    </section>
+    <div class="divider"></div>
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Educatify – MDCAT Online Preparation Platform</h3>
-        <ul>
-          <li>Built a full-stack LMS using Flask, HTML/CSS, and MySQL.</li>
-          <li>Integrated data visualizations (charts) for real-time user performance tracking.</li>
-        </ul>
+     Education 
+    <section aria-labelledby="education">
+      <h2 id="education" class="section-title">Education</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div class="left">Cadet College Kohat</div>
+          <div class="right">Kohat, Pakistan</div>
+        </div>
+        <div class="item-sub">
+          <div class="left">FSc Pre‑Engineering</div>
+          <div class="right">2017–2022</div>
+        </div>
       </div>
 
-      <div class="project">
-        <h3>AI Resume Analyzer (Python + Streamlit)</h3>
-        <ul>
-          <li>Analyzed resumes for ATS compliance, skill matching, and keyword density.</li>
-        </ul>
+      <div class="item">
+        <div class="item-header">
+          <div class="left">FAST NUCES Islamabad</div>
+          <div class="right">Islamabad, Pakistan</div>
+        </div>
+        <div class="item-sub">
+          <div class="left">BS Data Sciences</div>
+          <div class="right">2022–Present</div>
+        </div>
       </div>
     </section>
 
-    <section class="education">
-      <h2>Education</h2>
-      <p><strong>BS Data Science</strong> – FAST NUCES Islamabad (2022 – Present)</p>
-      <p>Relevant Coursework: AI, Data Structures, Databases, Web Dev</p>
+    <div class="divider"></div>
+
+     Certificates & Awards 
+    <section aria-labelledby="certs">
+      <h2 id="certs" class="section-title">Certificates and Awards</h2>
+      <ul>
+        <li><strong>HTML and CSS (Pirple)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1tiyLVV9kk8RYCl2kQxnHEg3l4kvkY4tl/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>JavaScript (Pirple)</strong> <a class="inline-link" href="https://drive.google.com/file/d/19ZKE8ckYG3-_v7KKT-btpGsDw44yW-8Y/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>React.js (Pirple)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1o_aG0sQA34opwXfkaoEUZOf-k4LkIdvd/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>Business Communication Skills (Tracks Institute)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1IW9VymvHW_aEKXR72CEax0jNhsw3DsTJ/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>Advanced Spoken English (Nicon Institute)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1IszBSL0x74IDlel3yhvIdebfOseTvr-n/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>Version Control — Git (Coursera)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1aVkc6diVLJnxbXLB1aVtnD1ek2mwZj2J/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>Event Management with Eventbrite (Coursera)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1XSUWw2o1cO1C6VacaeXMn0Nm7FKxxq2h/view?usp=drive_link">[View Credentials]</a></li>
+        <li><strong>NASCON Event Officer (FAST NUCES)</strong> <a class="inline-link" href="https://drive.google.com/file/d/1J7aPq5xRq41YanHwzzSYGv-syCyO94VU/view?usp=drive_link">[View Credentials]</a></li>
+      </ul>
     </section>
-  </div>
+
+    <div class="divider"></div>
+
+     Leadership 
+    <section aria-labelledby="leadership">
+      <h2 id="leadership" class="section-title">Leadership & Co‑Curricular</h2>
+      <ul>
+        <li>Founder & President — FAST Entrepreneurship & Startup Society (2024–25)</li>
+        <li>Head of Graphics — FAST Debating Society (2023–24)</li>
+        <li>Head of Operations — Tekhleeq & Production Society (2023–24)</li>
+        <li>Vice Head, Social Media — MLSA FAST (2023–24)</li>
+        <li>Secretary Operations — Sustainable Dev Society (2023–24)</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
